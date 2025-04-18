@@ -11,7 +11,7 @@ os.makedirs(output_label_dir, exist_ok=True)
 
 for filename in os.listdir(mask_dir):
     mask_path = os.path.join(mask_dir, filename)
-    image_path = os.path.join(image_dir, filename.replace('.png', '.jpg'))
+    image_path = os.path.join(image_dir, filename.replace('_mask.png', '.jpg'))
     if not os.path.exists(image_path): continue
 
     mask = cv2.imread(mask_path, 0)
